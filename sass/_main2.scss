@@ -1,0 +1,459 @@
+#events {
+    height: 99vh;  
+    padding: 2rem 4rem; 
+    padding-bottom: 2rem;
+    background: $events-bg center center no-repeat;
+    background-size: cover;
+    .events-wrapper {  
+        height: 100%;
+        
+        & .title {
+            text-align: center;
+            text-transform: uppercase;
+            padding: 2rem ;
+            height: 20vh;
+            & h5 {
+                display: inline-block;
+                font-size: 2.5rem;
+                position: relative;
+                bottom: 2.8rem;
+                color: $special-color;
+            } 
+        }    
+        & .bottom-line {
+            display: inline-block;
+            width: 15px ;
+            height: 80px;
+            margin-right: 2rem;
+            background-color: $special-color;
+        }
+
+        & .upcoming {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+
+            & .mycard {
+                height: 60vh;
+                width: 20vw; 
+                box-shadow: 2px 2px 30px 3px #888888;
+                margin: 1rem 2rem 0 1rem; 
+                font-size: 1rem;
+                background-color: #edf7fa; 
+                padding: 0 2rem;
+
+                & .upcomingImg img {
+                        position: relative;
+                        left: 10%;
+                        margin: auto;
+                        height: 27vh; 
+                        width: 13vw; 
+                        border-radius: 50%;  
+                        margin: 1rem 0;
+                }
+                
+                & .eventName, & .eventPost, & .date {
+                    font-size: 1.3rem;
+                    color: $tertiary-color;
+
+                    & i {
+                        margin: 1rem;
+                    }
+                } 
+
+                &:hover {
+                    @include pulse; 
+                }
+            }
+        }   
+
+    } 
+ 
+}
+
+// Team starts
+#team {
+    height: 100vh;
+    background: #000;
+    padding: 2rem;
+
+    & .team-title { 
+        margin-bottom: 2rem;
+    }
+    & .bottom-line {
+        height: 3px;
+        width: 150px;
+    }
+
+    & .swiper-container2 {
+        height: 70vh;
+        width: 90vw;
+        
+
+        & .swiper-button-next,& .swiper-button-prev {
+            color: $special-color;
+        }
+
+        & .swiper-wrapper { 
+            
+
+            & .swiper-slide {
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                
+                & .box {
+                    position: relative;
+                    width: 60vw;
+                    height: 60vh;
+                    // background: $tertiary-color; 
+                    margin: 15px;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    // box-shadow: 0 5px 10px $special-color; 
+                    
+                    
+                    & .box-img {
+                        position: relative;
+                        padding-top: 2rem;
+
+                        & img {
+                           width: 100%; 
+                           transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+                        } 
+                    }
+
+                    & .content {
+                        position: absolute;
+                        width: 100%;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        z-index: 2;
+                        box-sizing: border-box;
+                        text-align: center;
+                        visibility: hidden;
+                        & h2 {
+                            font-size: 3rem; 
+                            color: $special-color;
+                        }
+                        & h6 {
+                            font-size: 1.5rem; 
+                            color: $special-color;
+                        }
+                        & .social-icons a i{
+                            font-size: 2rem;
+                            color: $social-color;
+                            margin: 1rem;
+                            transition: color 1s ease;
+
+                            &:hover {
+                                color: $tertiary-color;
+                            }
+                        }
+
+                        transition: 1s all cubic-bezier(0.6, -0.28, 0.735, 0.045);
+                    }
+
+                    
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        right: 10px;
+                        bottom: 10px; 
+                        border-top: 1px solid #fff;
+                        border-bottom: 1px solid #fff;
+                        box-sizing: border-box;
+                        transform: scaleX(0);
+                        transition: 1s all cubic-bezier(0.6, -0.28, 0.735, 0.045);
+                        
+                    }
+                    &:hover:before {
+                        transform: scaleX(1);
+                        opacity: 1;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        right: 10px;
+                        bottom: 10px;
+                        border-left: 1px solid #fff;
+                        border-right: 1px solid #fff;
+                        box-sizing: border-box;
+                        transform: scaleY(0);
+                        transition: 1s all cubic-bezier(0.6, -0.28, 0.735, 0.045);
+                        
+                    }
+                    &:hover::after {
+                        transform: scaleY(1);
+                        opacity: 1;
+                    }
+                }
+                .box:hover  .box-img img { 
+                    transform: scale(1.2);
+                    opacity: .1;
+                }
+                .box:hover  .content {  
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+
+
+                & .border-side {
+                    height: 65%;
+                    width: 1%;
+                    background-color: $special-color;
+                }
+
+                & img {
+                    height: 50vh;
+                    width: 35vw;
+                    padding: 0rem;
+                }
+
+                & .info {
+                    padding: 0 3rem;
+                    text-align: left;
+                    
+                    & .team-person-name, & .intro, & .team-post {
+                        font-size: 1.5rem;
+                        color: $secondary-color;
+                        margin-bottom: 1rem;
+                        & i {
+                            margin-right: 2rem;
+                            font-size: 1.7rem;  
+                            color: $primary-color;
+                        }
+                        &  span{   
+                            padding: 0;
+                            text-align: center;
+                            font-size: 1.5rem;  
+                            color: $secondary-color; 
+                        }
+                    }
+                    & .team-person-name {
+                        i {
+                            margin-right: 2.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Team ends here
+
+// Contact us starts here 
+#contact {
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+
+    & img {
+        height: 90%;
+        width: 60%; 
+        position: relative;
+        left: 40px;
+    }
+
+    & .content {
+        position: relative; 
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: 150px;
+
+        & .heading {
+            display: block;
+            text-align: center;
+            & h2 { 
+                font-size: 2.6rem;
+                color: $special-color; 
+            } 
+
+            & .bottom-line {
+                background-color: $special-color;
+                height: 5px;
+                width: 100px;
+            }
+            margin-bottom: 3rem;
+        }
+        & .line {
+            display: block;
+            text-align: center;
+            & p:nth-child(1) { 
+                font-size: 1.8rem;
+                color: $tertiary-color;
+            }
+            & p:nth-child(2) {
+                font-size: 1.8rem;
+                color: $tertiary-color;
+                position: relative;
+                bottom: 1.5rem;
+                margin-top: 0;
+            }
+
+            & p span {
+                font-size: 3rem;
+                color: $primary-color;
+            }
+        }
+        & .contact-icons { 
+            display: block;
+            text-align: center;
+            & a i {
+                font-size: 3rem;
+                color: $tertiary-color;
+                margin: 1.3rem;
+                @include trans-ease;
+                &:hover {
+                    color: $primary-color;
+
+                }
+            }
+        }
+
+        & .subscribe {
+            display: block;
+            text-align: center;
+            & h2 {
+                font-size: 1.5rem;
+                color: $tertiary-color;
+                position: relative;
+                top: .5rem;
+            }
+        }
+    }
+ 
+}
+
+
+// contact us ends
+
+
+// Footer starts
+#footer {
+    height: 60vh;
+    background-color: #000;
+    line-height: 2;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr); 
+    position: relative;
+
+    & .cell-info {
+        grid-area: 'info';
+        padding: 1.5rem;
+        margin-right: 6rem;
+        height: 300px;
+        & .cell-logo {
+            & h5 {
+                font-size: 2.5rem;
+                color: $secondary-color;
+            }
+        }
+        & .vision {
+            font-size: 1.1rem;
+            color: $footer-color;
+        }
+        & .footer-icons {
+            display: block;
+            text-align: left;
+
+            & i {
+                color: $social-color; 
+                margin: 2rem 1.5rem 0 0;
+                font-size: 1.8rem;
+                @include trans-ease;
+
+                &:hover  {
+                    color: $tertiary-color;
+                }
+            }
+
+        }
+    }
+
+    & .quick-links {
+        grid-area: 'links';
+        width: 350px;
+        margin-right: 2rem;
+        padding: 1.5rem; 
+        height: 300px;
+        & .link-title {
+            & h3 {
+                font-size: 1.2rem;
+                color: $secondary-color;
+            }
+        }
+
+        & .links {
+            display: flex;
+            flex-direction: column;
+            & a {
+                color: $footer-color;
+
+                &:hover {
+                    color: rgba($special-color,.8);
+                }
+            }
+        }
+    }
+
+    & .contact-us {
+        grid-area: 'contact';
+        padding: 1.5rem;
+        position: relative;
+        right: 35px;
+        width: 600px;
+        height: 300px;
+        & .contact-title {
+            & h3 { 
+                font-size: 1.2rem;
+                color: $secondary-color;
+            }
+        }
+
+        & .email,
+        & .address, 
+        & .phone {
+            display: flex;  
+            align-items: center;
+
+            & i {
+                font-size: 1.8rem;
+                margin: 1rem 1rem 1rem 0;
+                color: $social-color;
+            }
+            
+            & a{
+                color: $footer-color;
+        
+                &:hover {
+                    color: rgba($special-color,.8);
+                }
+            }
+        }
+    }
+
+    & .copywrite {   
+        position: absolute;
+        bottom: 1rem;
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 0;
+        & h2 {
+            font-size: 1.5rem;
+            & a {
+                margin: 0 1rem;
+            }
+        }
+    }
+}
+
+// Footer ends here

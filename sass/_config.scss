@@ -1,0 +1,77 @@
+$primary-color : #ff7315;
+$secondary-color : #f4f4f4;
+$tertiary-color: #3a3535;
+$special-color: #6C63FF;
+$social-color: #dd2476;
+$footer-color: #635f76;
+$bg-img: url('../img/elonmusk.jpg');
+$bg-svg: url('../img/wave2.svg');
+$about-svg: url('../img/mobile_testing.svg');
+$parallax-svg: url('../img/par2.jpg');
+$redirect-svg: url('../img/drone_del.svg');
+$events-bg: url('../img/bgEvents.svg'); 
+
+@mixin  trans-ease {
+    transition: all .5s ease-in-out;
+}
+
+
+@mixin link-hover {
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2.4px;
+        background: $secondary-color; 
+        transition: all .5s ease-in-out;
+    }
+
+    &:hover::after  {
+        width: 100%; 
+    }
+}
+
+// Animations
+.flash {  
+    animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@mixin pulse {
+    -webkit-animation-name: pulse;
+    animation : pulse 1s ease-in-out 1; 
+}

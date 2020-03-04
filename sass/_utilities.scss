@@ -1,0 +1,115 @@
+.container { 
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  // Buttons
+  %mybtn-shared {
+    display: inline-block;
+    padding: 0.5rem 3rem;
+    transition: all .5s;
+    border: none;
+    cursor: pointer; 
+  }
+  
+  .mybtn {
+    &-primary {
+      @extend %mybtn-shared;
+      color: #333;
+      border: 1.2px solid $primary-color;
+      background-color: $primary-color;
+    }
+    &-secondary {
+      @extend %mybtn-shared;
+      border: 1.2px solid #ccc;
+      color: $secondary-color;
+      background-color: transparent;
+    }
+    &-dark {
+      @extend %mybtn-shared;
+      color: #f4f4f4;
+      background-color: $tertiary-color;
+    }
+  }
+  
+  button[class^='mybtn-']:hover ,
+  a[class^='mybtn-']:hover ,
+  input[class^='mybtn-']:hover {
+    background-color: $primary-color;
+    @include trans-ease;
+  }
+  
+//   // Backgroud Colors
+//   .bg {
+//     &-main {
+//       background: $main-color;
+//       color: set-text-color($main-color);
+//     }
+//     &-dark {
+//       background: $dark-color;
+//       color: set-text-color($dark-color);
+//     }
+//     &-light {
+//       background: $light-color;
+//       color: set-text-color($light-color);
+//     }
+//     &-medium {
+//       background: $medium-color;
+//       color: set-text-color($medium-color);
+//     }
+//   }
+  
+.active {
+    color: $primary-color !important;
+}
+  
+  .lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  // Padding-y
+  .py {
+    &-1 {padding: 1rem 0;}
+    &-2 {padding: 2rem 0;}
+    &-3 {padding: 3rem 0;}
+    &-4 {padding: 4rem 0;} 
+  }
+  
+  // margin-y
+  .my {
+    &-1 {margin: 1rem 0;}
+    &-2 {margin: 2rem 0;}
+    &-3 {margin: 3rem 0;}
+    &-4 {margin: 4rem 0;} 
+  }
+  
+  // Bottom line
+  
+  .bottom-line {
+    height: 2px;
+    width: 5rem;
+    background: $primary-color;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+  
+  // section Title
+  .section-title {
+    font-size: 2rem;
+    display: block;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+  
+  
+  
+
+  

@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap');
+
+
+@import 'config';
+@import 'utilities';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html {
+    scroll-behavior: smooth ;
+}
+
+body {
+    position: relative;
+    font-family: Ubuntu ;  
+    color: $primary-color; 
+    line-height: 2 !important;
+    // overflow-x: hidden;
+}
+
+header {
+    
+    background: 
+             linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,.3))       
+            ,$bg-img center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    
+    .menu-btn, .menunav {
+        display: none;
+    }
+
+    #section-a {
+        height: 10vh;
+
+        & .container { 
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            & a {
+                color: $primary-color;
+                font-size: 2rem;
+            }
+    
+            & ul.nav-links {
+                display: flex; 
+                justify-content: space-around;
+                align-items: center;
+                margin-left: auto;
+                width: 40%;
+                height: 100%;
+
+                .active { 
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 2.4px;
+                        background: $secondary-color;  
+                    }                
+                }
+                  
+            
+                & li a {
+                    color: $primary-color;
+                    font-size: 1.2rem;  
+                    @include link-hover;
+                }
+
+
+            }
+        }
+    
+    }
+
+    #section-b { 
+        padding: 20vh 9vw;
+        h1 {
+            color: $secondary-color;
+            font-size: 5rem;
+             
+            .txt-type{
+                color: $primary-color;
+            }
+            .cursor { 
+                border-right: .2rem solid #777;
+                background:#eee;
+            }
+        }
+
+        a { 
+            margin: 5vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        & .qoute {     
+            padding-right: .8rem;
+            .content {
+                color: #aaa;
+            }
+        }
+        
+    }
+  
+}
+
+// header ends here
+
+
+// About us
+#about {
+    height: 100vh;
+    background:  
+            linear-gradient(to right,rgba($primary-color,0.8) , rgba($primary-color,0));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    & img {
+        height: 80%;
+        width: 50%;
+    }
+    
+    .about-content {  
+        & .section-title {
+            color: $special-color;
+        }
+        .bottom-line { 
+            height: 3px; 
+            background: $special-color; 
+        }
+
+        padding: 0 0;
+        p {
+            font-size: 3rem;
+        }
+
+        & .team-btn-div {
+            display: flex;
+            justify-content: center;
+            & .team-btn {
+                height: 30%;
+                width: 30%; 
+                // position: relative;
+                // left: 30%; 
+                
+            } 
+        }
+        .about-text {    
+            margin-top: 3rem;
+            font-size: 1.5rem;
+            color: $tertiary-color; 
+            
+            & .purpose {
+                color: $special-color; 
+                & i {
+                    margin: 0 2rem 0 1rem;
+                }
+            }
+
+            & .points {
+                padding: 1rem; 
+                position: relative;
+                bottom: 2rem;
+
+                & i {
+                    font-size: 1.2rem;
+                    color: $special-color;
+                    margin-right: 2rem;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+
+    & .scrollToTop {
+        position: fixed;
+        right: 2%;
+        bottom: 3%; 
+        display: none;
+        & a.btn-floating {  
+            background: $special-color;
+        }
+    }
+}
+// About us ends
+
+
+// Parralax
+#parallax {
+    height: 100vh; 
+    background: 
+            linear-gradient(to right, rgba(0,0,0,0.6),rgba(0,0,0,0.6))
+            ,$parallax-svg center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;      
+    
+    & .swiper-container {
+        width: 100%;
+        height: 100%; 
+        padding: 10% 20%;
+        
+        & .swiper-wrapper .swiper-slide { 
+          background-position: center;
+          background-size: cover;  
+          height: 60vh;  
+            & img {  
+                display: block;
+                margin: auto; 
+                width: 30%;
+                height: 60%; 
+                border-radius: 50%;
+            }
+
+            & .reaction {
+                margin-top: 2rem;
+                text-align: justify;
+                font-weight: 600;
+                width: 100%;
+                font-size: 1.8rem;
+                color: $secondary-color;
+            }
+
+            & p {
+                position: relative;
+
+                &.name{  
+                    margin-top: 1rem;
+                    font-size: 1.5rem;
+                }
+                
+                &.post {  
+                    position: absolute; 
+                    margin-top: 1.3rem;
+                    right: 0;
+                    font-size: 1rem !important;
+                }
+            }
+        }
+      }
+      
+} 
+
+// Parallax ends
+
+// live updates
+#stats{
+    background: 
+            $bg-svg center center no-repeat;  
+    background-size: cover;
+    height: 65vh;
+    width: 100%;
+
+    & .stats { 
+        height: 100%;
+        box-shadow: none; 
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+
+        // display: grid;
+        // grid-template-columns: repeat(4, 1fr); 
+    }
+
+    & .stat {
+        margin: 5rem; 
+        text-align: center; 
+        height: 40%; 
+        min-width: 10vw;
+        // box-shadow: 1px 1px 15px 0 #111;
+        color: $tertiary-color;
+
+        & h3 {
+            margin-top: 0;
+        }
+
+        // & img { 
+        //     margin: 1rem auto; 
+        //     position: relative;
+        //     right: auto;
+        //     left: auto;
+        //     height: 50%;
+        //     width: 50%;
+        // }
+    }
+
+}
+
+
+.scrollToTopMobile {
+    display: none;
+}
+@import 'main2';
+@import 'redirect';
+@import 'media';
