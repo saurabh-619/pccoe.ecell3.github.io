@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap');
+
+
+@import 'config';
+@import 'utilities'; 
+
+body {
+    background: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    font-family: Ubuntu;
+}
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.materialboxed.active {
+    overflow: hidden;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 500px;
+    height: 400px;  
+    & img {
+        height: 400px;
+        width: 500px;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+    }
+}
+#materialbox-overlay  {
+    background-color: transparent; 
+}
+
+
+#desktop {
+    font-size: 14px;
+    // color:#000;
+    margin: 0;
+    padding: 1rem 2rem 0 2rem;
+    height: 100vh;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    
+    & .heading {  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & h1 {
+            color: $social-color;
+            font-size: 3rem;
+        }
+        & .border-line {  
+            background-color: $social-color;
+            height: 5px;
+            width: 200px;
+        }
+    }
+
+    & .copywrite {  
+        display: block;
+        width: 100%;
+        text-align: center;
+        
+        position: absolute;
+        bottom: 0rem;
+        & h2 {
+            color: #fff;
+            font-size: 1.5rem;
+
+            & a.btn-floating  { 
+                margin: 0 1rem ;
+                z-index: 0;
+            }
+        }
+    }
+
+    
+}
+#mobile {
+    display: none;
+}
+
+@media screen and (max-width:786px)
+{
+    #desktop {
+        display: none;
+    }
+
+    #mobile {
+        height: 100vh;
+        display: block;
+        padding: 2rem 0;
+        text-align: center;
+        background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+        // padding: 2rem;
+        
+        & .heading {  
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & h1 {
+                color: $social-color;
+                font-size: 3rem;
+            }
+            & .border-line {  
+                background-color: $social-color;
+                height: 5px;
+                width: 200px;
+                margin-bottom: 9rem;
+            }
+        }
+
+         
+        
+        .swiper-slide {
+            text-align: center;
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 350px; 
+            overflow: hidden;
+            position: relative;
+            bottom: 2rem;
+            & img {
+                position: relative; 
+                left: 2.8rem;
+                height: 350px;
+                width: 300px;
+                overflow: hidden; 
+            }
+        }
+
+        & .copywrite { 
+            position: relative;
+            top: 2rem;
+            & h2 {
+                color: #fff;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

@@ -222,7 +222,7 @@
         
     // About us
     #about {
-        height: 90vh; 
+        height: 100vh; 
         background:  
                 linear-gradient(to right,rgba($primary-color,0.9), rgba($primary-color,0));
         display: flex;
@@ -233,7 +233,9 @@
 
         & img {
             height: 40%;
-            width: 50%;  
+            width: 50%;
+            position: relative;
+            top: 2rem;  
         }
         
         .about-content { 
@@ -251,12 +253,15 @@
 
             & .team-btn-div {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
+                align-items: center;
                 & .team-btn {
                     height: 10%;
                     width: 50%;  
                     position: relative;
-                    bottom: 2rem; 
+                    bottom: 1.5rem; 
+                    margin-bottom: 1.5rem;
                     
                 } 
             }
@@ -308,7 +313,7 @@
 
     // Parralax
     #parallax {
-        height: 90vh;  
+        height: 100vh;  
         width: 100vw;
         line-height: 1.9;
         background: 
@@ -391,7 +396,7 @@
         background: 
                 $bg-svg 21% center no-repeat;  
         background-size: cover;
-        height: 90vh; 
+        height: 100vh; 
         padding: 2rem 0;
 
         & .stats { 
@@ -585,7 +590,7 @@
                             }
                         }
 
-                        transition: 1s all cubic-bezier(0.6, -0.28, 0.735, 0.045);
+                        transition: .9s all step-end; 
                     }
 
                     

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/gallary.min.css">
+  <title>Swiper demo</title>
+  
+</head>
+<body>
+    <div id="desktop">
+        <div class="heading">
+            <h1>Welcome to ECELL's Gallary</h1>
+            <div class="border-line"></div>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/person1.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/person2.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/person3.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/elon1.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/steve1.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/par2.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/visitors/sonam.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/steve2.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/par1.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/elon2.jpg" alt=""> 
+              </div>
+            </div> 
+        </div>  
+          <div class="copywrite">
+            <h2>Made with  <a href=" https://saurabh-bomble-portfolio.netlify.com/" target="_next" class="btn-floating pulse pink"><i class="material-icons">favorite</i></a> by E-Cell PCCOE</h2>
+          </div>      
+    </div>
+ 
+    <div id="mobile">
+        <div class="heading">
+            <h1>Welcome to ECELL's Gallary</h1>
+            <div class="border-line"></div>
+        </div>
+        <div class="swiper-container2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/person1.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/person2.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/person3.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/person1.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/steve1.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/visitors/faisal.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/visitors/sachin.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/steve2.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/par1.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                  <img class="materialboxed" src="./img/elon2.jpg" alt=""> 
+              </div>
+            </div> 
+          </div>  
+
+        <!-- Add Scrollbar -->
+        <div class="swiper-scrollbar"></div>   
+        
+        <div class="copywrite">
+            <h2>Made with <a href=" https://saurabh-bomble-portfolio.netlify.com/" target="_next" class="btn-floating pulse pink"><i class="material-icons">favorite</i></a> by E-Cell PCCOE</h2>
+        </div>
+    </div>
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+
+    var swiper = new Swiper('.swiper-container2', {
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: true,
+      },
+    });
+
+    $(document).ready(function(){
+        $('.materialboxed').materialbox();
+    });
+  </script>
+</body>
+</html>
