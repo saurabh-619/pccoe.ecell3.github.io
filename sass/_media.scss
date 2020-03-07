@@ -229,6 +229,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center; 
+        padding-bottom: 1.5rem;
 
         & img {
             height: 40%;
@@ -766,9 +767,7 @@
             }
 
             & a.black {
-                background-color: #000 !important;
-
-                
+                background-color: #000 !important;  
             } 
                         
         }
@@ -784,7 +783,7 @@
  
 // Footer starts
 #footer {
-    height: 100vh; 
+    height: 110vh; 
     background-color: #000;
     line-height: 2;
     padding: 1rem;
@@ -892,7 +891,8 @@
 
     & .copywrite {   
         position: absolute; 
-        top: 93.5vh;
+        // top: 93.5vh;
+        bottom: 1rem;
         width: 90vw;  
         padding: 0;
         & h2 {
